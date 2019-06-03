@@ -529,7 +529,7 @@ a {
           font-size: 16px; } }
   @media (max-width: 599px) {
     .navbar-ctas {
-      top: 10%;
+      top: 40%;
       left: 0;
       width: 100%;
       -webkit-box-sizing: border-box;
@@ -537,14 +537,16 @@ a {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-      -webkit-transform: translateY(-10%);
-      -ms-transform: translateY(-10%);
-      transform: translateY(-10%);
+      -webkit-transform: translateY(-40%);
+      -ms-transform: translateY(-40%);
+      transform: translateY(-40%);
       background: none; }
       .navbar-ctas .navbar-link {
         margin: 30px 20px; }
         .navbar-ctas .navbar-link a {
-          font-size: 24px; } }
+          font-size: 24px; }
+        .navbar-ctas .navbar-link#booking-cta a {
+          padding: 10px 10px 8px 11px; } }
 
 .navbar-toggle-contain {
   position: fixed;
