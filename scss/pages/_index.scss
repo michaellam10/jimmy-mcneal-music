@@ -1,0 +1,219 @@
+.home {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  #landing-content {
+    z-index: 5;
+    margin: 0 auto;
+    position: fixed;
+    text-align: center;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -45%);
+
+    .featured-headline {
+      display: flex;
+      transform: translateX(100px);
+
+      // @include for-size(tablet-landscape-up) {
+      //   display: none;
+      // }
+
+      @include for-size(tablet-landscape-up) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include for-size(phone-only) {
+        display: none;
+      }
+
+      &.featured-headline-post-transition {
+        transform: translateX(0);
+        transition: 1.75s ease 1.35s;
+      }
+
+      #first-headline {
+        opacity: 0;
+        transform: translateY(-50px);
+
+        &.first-headline-post-transition {
+          opacity: 1;
+          transform: translateY(0);
+          transition: 1.35s ease;
+        }
+      }
+
+      #second-headline {
+        opacity: 0;
+        transform: translateY(50px);
+        margin-left: 20px;
+
+        &.second-headline-post-transition {
+          opacity: 1;
+          transform: translateY(0);
+          transition: 1.5s ease 2.35s;
+        }
+
+        // @include for-size(tablet-landscape-up) {
+        //   margin-left: 14px;
+        // }
+      }
+    }
+
+    h1 {
+      font-family: 'CooperHewitt-Semibold', sans-serif;
+      // font-size: 70px;
+      font-size: 4vw; //this is a maybe
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(238,238,238,0.9);
+      padding-top: 15px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      white-space: nowrap;
+
+      @include for-size(desktop-up) {
+        // font-size: 70px;
+      }
+
+      @include for-size(tablet-landscape-up) {
+        font-size: 6vw;
+        margin: 0;
+        padding: 0 0 5px 0;
+
+        &#second-headline {
+          font-size: 4vw;
+        }
+      }
+
+      @include for-size(tablet-portrait-up) {
+        font-size: 7vw;
+
+        &#second-headline {
+          font-size: 6vw;
+        }
+      }
+
+      @include for-size(phone-only) {
+        // font-size: 40px;
+      }
+    }
+
+    .line-design {
+      height: 0px;
+      width: 0px;
+      border-bottom: 2px solid rgba(238, 238, 238, 0.3);
+      border-color: rgba(238,238,238,0.8);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      content: '';
+
+      &#line-left {
+        animation:         increase-left 1.0s;
+        animation-delay: 3.5s;
+        -webkit-animation: increase-left 1.0s;
+        -moz-animation:    increase-left 1.0s;
+        -o-animation:      increase-left 1.0s;
+        -webkit-animation-delay: 3.5s;
+        animation-fill-mode: forwards;
+        left: 0;
+      }
+
+      &#line-right {
+        animation:         increase-right 1.0s;
+        animation-delay: 3.5s;
+        -webkit-animation: increase-right 1.0s;
+        -moz-animation:    increase-right 1.0s;
+        -o-animation:      increase-right 1.0s;
+        -webkit-animation-delay: 3.5s;
+        animation-fill-mode: forwards;
+        right: 0;
+      }
+
+      @include for-size(tablet-landscape-up) {
+        top: 2em;
+      }
+
+      @include for-size(tablet-portrait-up) {
+        top: 1.8em;
+      }
+
+      @media screen and (max-width: 750px) {
+        top: 1.6em;
+      }
+    }
+
+    // @include for-size(phone-only) {
+    //   top: auto;
+    //   bottom: 0;
+    //   transform: translate(-50%, -50%);
+    // }
+  }
+
+  .navbar-toggle-contain {
+    top: 26px;
+
+    .navbar-toggle .icon-bar {
+      background-color: rgba(255,255,255,0.95);
+    }
+  }
+}
+
+@keyframes increase-right {
+  100% {
+    width: 50%;
+    right: -55%;
+  }
+}
+
+@keyframes increase-left {
+  100% {
+    width: 50%;
+    left: -55%;
+  }
+}
+
+@include for-size(tablet-portrait-up) {
+  @keyframes increase-right {
+    100% {
+      width: 33%;
+      right: -37%;
+    }
+  }
+
+  @keyframes increase-left {
+    100% {
+      width: 33%;
+      left: -37%;
+    }
+  }
+}
+
+.background-video {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0;
+
+  &.background-video-post-transition {
+    opacity: 1;
+    transition: 0.2s ease;
+  }
+
+  @media screen and (max-aspect-ratio: 1920/1080) {
+    height: 100%;
+  }
+
+  @media screen and (min-aspect-ratio: 1920/1080) {
+    width: calc(100% + 1px);
+  }
+}
