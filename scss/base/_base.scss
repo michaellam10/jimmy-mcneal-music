@@ -2,7 +2,7 @@ main {
   box-sizing: border-box;
   // padding: 42px;
 
-  @include for-size(tablet-portrait-up) {
+  @include for-size(tablet-portrait-down) {
 
   }
 

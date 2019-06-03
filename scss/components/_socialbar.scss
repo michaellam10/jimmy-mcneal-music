@@ -12,16 +12,16 @@
   z-index: 3;
   opacity: 0;
 
-  // @include for-size(tablet-landscape-up) {
+  // @include for-size(tablet-landscape-down) {
   //   top: 50%;
   // }
 
-  // @include for-size(tablet-portrait-up) {
+  // @include for-size(tablet-portrait-down) {
   //   top: auto;
   //   bottom: 0;
   // }
 
-  @include for-size(tablet-landscape-up) {
+  @include for-size(tablet-landscape-down) {
     top: auto;
     margin: 0;
     bottom: 20px;

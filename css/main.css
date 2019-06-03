@@ -166,7 +166,7 @@ html {
     @media (min-width: 900px) { @content; }
   } @else if $size == desktop-up {
     @media (min-width: 1200px) { @content; }
-  } @else if $size == big-desktop-up {
+  } @else if $size == big-desktop-down {
     @media (min-width: 1800px) { @content; }
   }
 } */
@@ -426,7 +426,7 @@ a {
   transition: 1s;
   display: none; }
   .navbar-logo a {
-    font-family: 'ProximaBold';
+    font-family: 'ProximaBold', sans-serif;
     font-weight: 600;
     letter-spacing: 3.5px;
     text-transform: uppercase;
@@ -441,6 +441,7 @@ a {
 
 .navbar-ctas {
   font-family: 'ProximaRegular', sans-serif;
+  font-family: 'MaisonNeue-Bold', sans-serif;
   text-align: right;
   padding: 0; }
   .navbar-ctas .navbar-link {
@@ -530,11 +531,20 @@ a {
     .navbar-ctas {
       top: 10%;
       left: 0;
-      width: 150px;
+      width: 100%;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
       -webkit-transform: translateY(-10%);
       -ms-transform: translateY(-10%);
       transform: translateY(-10%);
-      background: none; } }
+      background: none; }
+      .navbar-ctas .navbar-link {
+        margin: 30px 20px; }
+        .navbar-ctas .navbar-link a {
+          font-size: 24px; } }
 
 .navbar-toggle-contain {
   position: fixed;

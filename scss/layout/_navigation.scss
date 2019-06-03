@@ -24,7 +24,7 @@
     }
   }
 
-  @include for-size(tablet-portrait-up) {
+  @include for-size(tablet-portrait-down) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -42,7 +42,7 @@
   display: none;
 
   a {
-    font-family: 'ProximaBold';
+    font-family: 'ProximaBold', sans-serif;
     font-weight: 600;
     letter-spacing: 3.5px;
     text-transform: uppercase;
@@ -58,6 +58,7 @@
 
 .navbar-ctas {
   font-family: 'ProximaRegular', sans-serif;
+  font-family: 'MaisonNeue-Bold', sans-serif;
   text-align: right;
   padding: 0;
 
@@ -117,7 +118,7 @@
     }
   }
 
-  @include for-size(tablet-portrait-up) {
+  @include for-size(tablet-portrait-down) {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -148,9 +149,19 @@
   @include for-size(phone-only) {
     top: 10%;
     left: 0;
-    width: 150px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
     transform: translateY(-10%);
     background: none;
+
+    .navbar-link {
+      margin: 30px 20px;
+
+      a {
+        font-size: 24px;
+      }
+    }
   }
 }
 
@@ -234,7 +245,7 @@
   }
 }
 
-@include for-size(tablet-portrait-up) {
+@include for-size(tablet-portrait-down) {
   .navbar-toggle-contain {
     display: inline;
     right: 36px;
