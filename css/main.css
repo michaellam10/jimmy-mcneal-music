@@ -380,7 +380,6 @@ a {
   left: 0;
   right: 0;
   padding: 15px 60px;
-  height: 80px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
@@ -442,7 +441,13 @@ a {
 .navbar-ctas {
   font-family: 'ProximaRegular', sans-serif;
   font-family: 'MaisonNeue-Bold', sans-serif;
-  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  width: 50%;
+  margin: 20px auto;
   padding: 0; }
   .navbar-ctas .navbar-link {
     display: inline;
@@ -452,7 +457,7 @@ a {
       text-transform: uppercase;
       font-weight: 700;
       letter-spacing: 1.5px;
-      font-size: 12.5px; }
+      font-size: 14px; }
       .navbar-ctas .navbar-link a:hover {
         font-weight: 900;
         color: #aaaaaa;
@@ -462,7 +467,7 @@ a {
     .navbar-ctas .navbar-link#booking-cta a {
       border: 1px solid #eeeeee;
       border-radius: 5px;
-      padding: 7px 10px 5px 11px;
+      padding: 7px 10px 5px 12px;
       -webkit-transition: 0.2s;
       -o-transition: 0.2s;
       transition: 0.2s; }
@@ -499,6 +504,11 @@ a {
             transition: 1s ease 0.9s; } }
   @media (max-width: 900px) {
     .navbar-ctas {
+      width: 100%; }
+      .navbar-ctas .navbar-link {
+        margin: 20px 20px; } }
+  @media (max-width: 599px) {
+    .navbar-ctas {
       position: fixed;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -507,31 +517,8 @@ a {
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
       flex-direction: column;
-      top: 0;
-      right: -200px;
-      margin: 0;
-      padding: 70px 30px 30px 25px;
-      text-align: left;
-      background-color: #111111;
-      -webkit-transition: 0.5s;
-      -o-transition: 0.5s;
-      transition: 0.5s;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px; }
-      .navbar-ctas.active {
-        right: 0;
-        -webkit-transition: 0.5s ease;
-        -o-transition: 0.5s ease;
-        transition: 0.5s ease; }
-      .navbar-ctas .navbar-link {
-        margin: 20px 20px; }
-        .navbar-ctas .navbar-link a {
-          font-size: 16px; } }
-  @media (max-width: 599px) {
-    .navbar-ctas {
       top: 40%;
       left: 0;
-      width: 100%;
       -webkit-box-sizing: border-box;
       box-sizing: border-box;
       -webkit-box-align: center;
@@ -546,80 +533,7 @@ a {
         .navbar-ctas .navbar-link a {
           font-size: 24px; }
         .navbar-ctas .navbar-link#booking-cta a {
-          padding: 10px 10px 8px 11px; } }
-
-.navbar-toggle-contain {
-  position: fixed;
-  top: 28px;
-  width: 22px;
-  z-index: 6;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-  opacity: 1;
-  transition: 1s;
-  display: none;
-  outline: none; }
-  .navbar-toggle-contain.collapsed {
-    opacity: 0;
-    -webkit-transition: opacity 0.1s;
-    -o-transition: opacity 0.1s;
-    transition: opacity 0.1s; }
-  @media screen and (min-width: 1200px) {
-    .navbar-toggle-contain.scrolled {
-      top: 28px;
-      -webkit-transition: 0.45s ease-out;
-      -o-transition: 0.45s ease-out;
-      transition: 0.45s ease-out; } }
-
-.navbar-toggle-contain .navbar-toggle {
-  padding-left: 6px;
-  padding-right: 6px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  border: none;
-  background: none; }
-  .navbar-toggle-contain .navbar-toggle:hover {
-    cursor: pointer; }
-  .navbar-toggle-contain .navbar-toggle:focus {
-    outline: none; }
-  .navbar-toggle-contain .navbar-toggle .icon-bar {
-    display: block;
-    width: 22px;
-    height: 2px;
-    border-radius: 1px;
-    background-color: rgba(255, 255, 255, 0.95);
-    -webkit-transition: 0.25s;
-    -o-transition: 0.25s;
-    transition: 0.25s; }
-    .navbar-toggle-contain .navbar-toggle .icon-bar.clicked {
-      -webkit-transform-origin: top left;
-      -ms-transform-origin: top left;
-      transform-origin: top left; }
-      .navbar-toggle-contain .navbar-toggle .icon-bar.clicked:first-of-type {
-        -webkit-transform: translateY(0px) translateX(4px) rotate(44deg);
-        -ms-transform: translateY(0px) translateX(4px) rotate(44deg);
-        transform: translateY(0px) translateX(4px) rotate(44deg);
-        width: 18px;
-        visibility: visible; }
-      .navbar-toggle-contain .navbar-toggle .icon-bar.clicked:nth-of-type(2) {
-        opacity: 0; }
-      .navbar-toggle-contain .navbar-toggle .icon-bar.clicked:last-of-type {
-        -webkit-transform: translateY(0px) translateX(3px) rotate(-44deg);
-        -ms-transform: translateY(0px) translateX(3px) rotate(-44deg);
-        transform: translateY(0px) translateX(3px) rotate(-44deg);
-        width: 17px;
-        visibility: visible; }
-  .navbar-toggle-contain .navbar-toggle .icon-bar + .icon-bar {
-    margin-top: 4px; }
-  @media (max-width: 599px) {
-    .navbar-toggle-contain .navbar-toggle {
-      display: none; } }
-
-@media (max-width: 900px) {
-  .navbar-toggle-contain {
-    display: inline;
-    right: 36px; } }
+          padding: 10px 10px 8px 12px; } }
 
 .social-bar {
   position: absolute;
