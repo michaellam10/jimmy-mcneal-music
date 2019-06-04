@@ -247,6 +247,9 @@ a {
           -webkit-transition: 1.5s ease 2.35s;
           -o-transition: 1.5s ease 2.35s;
           transition: 1.5s ease 2.35s; }
+        @media (max-width: 1200px) {
+          .home #landing-content .featured-headline #second-headline {
+            margin-left: 0; } }
     .home #landing-content h1 {
       font-family: 'CooperHewitt-Semibold', sans-serif;
       font-size: 4vw;
@@ -441,14 +444,14 @@ a {
 .navbar-ctas {
   font-family: 'ProximaRegular', sans-serif;
   font-family: 'MaisonNeue-Bold', sans-serif;
+  padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
   width: 50%;
-  margin: 20px auto;
-  padding: 0; }
+  margin: 20px auto; }
   .navbar-ctas .navbar-link {
     display: inline;
     margin-left: 50px; }

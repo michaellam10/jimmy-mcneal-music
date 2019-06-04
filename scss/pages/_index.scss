@@ -52,6 +52,7 @@
         opacity: 0;
         transform: translateY(50px);
         margin-left: 20px;
+        // color: rgba(65,105,255,0.9);
 
         &.second-headline-post-transition {
           opacity: 1;
@@ -59,15 +60,14 @@
           transition: 1.5s ease 2.35s;
         }
 
-        // @include for-size(tablet-landscape-down) {
-        //   margin-left: 14px;
-        // }
+        @include for-size(tablet-landscape-down) {
+          margin-left: 0;
+        }
       }
     }
 
     h1 {
       font-family: 'CooperHewitt-Semibold', sans-serif;
-      // font-size: 70px;
       font-size: 4vw; //this is a maybe
       letter-spacing: 3px;
       text-transform: uppercase;
